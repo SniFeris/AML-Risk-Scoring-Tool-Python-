@@ -32,7 +32,7 @@ README.md
 Risk Scoring Logic
 
 This tool calculates the overall AML risk score based on three main factors:
-1. Account Balance Risk
+1. Account Balance
 Balance ≥ 10,000 → Score: 3
 Balance 5,000 – 9,999 → Score: 2
 Balance 1,000 – 4,999 → Score: 1
