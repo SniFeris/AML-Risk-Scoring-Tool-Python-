@@ -1,4 +1,8 @@
-
+ALIASES = {
+    "afganistan": "afghanistan",
+    "pakstan": "pakistan",
+    "ukrane": "ukraine",
+}
 
 def balance_score(balance):
     if balance >= 10000:
@@ -21,7 +25,13 @@ FATF_BLACK = load_list("fatf_black_list.txt")
 FATF_GREY = load_list("fatf_grey_list.txt")
 
 def normalize_country(name:str) -> str:
-    return name.strip().lower()
+    c = name.strip().lower()
+    if c in ALIASES:
+        print(f"Warning: '{name}' corrected to '{ALIASES[c]}'")
+        return ALIASES[c]            
+    return c
+              
+    
 
 def country_risk_score(country: str) ->int:
     c = normalize_country(country)
