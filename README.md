@@ -63,6 +63,10 @@ cd AML-Risk-Scoring-Tool-Python-
 3. Run the program:
 python main.py
 
+## Example run
+
+![Example run](screenshot/example_run.png)
+
 
 
 
